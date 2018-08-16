@@ -20,10 +20,11 @@ public class FrameTable extends javax.swing.JFrame {
             c.setNome ("nome"+i);
             c.setIdade(i+10);
             c.setCpf("cpf"+i);
-                    
+            listCliente.add(c); 
         
         
         }
+        updateTable();
     }
 
     
