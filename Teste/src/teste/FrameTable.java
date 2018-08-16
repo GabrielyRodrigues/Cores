@@ -50,6 +50,11 @@ public class FrameTable extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
+            }
+        });
         table.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 tableKeyReleased(evt);
@@ -111,6 +116,14 @@ public class FrameTable extends javax.swing.JFrame {
             updateTable();
         }
     }//GEN-LAST:event_tableKeyReleased
+
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+      
+        if (evt.getClickCount()==2){
+            listCliente.remove(table.getSelectedColumns());
+            updateTable();
+        }
+    }//GEN-LAST:event_tableMouseClicked
 
     /**
      * @param args the command line arguments
