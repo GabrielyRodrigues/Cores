@@ -111,7 +111,14 @@ public class FrameTable extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 private void updateTable(){
 
-DefaultTableModel modelo = new DefaultTableModel();
+DefaultTableModel modelo = new DefaultTableModel(){
+
+    public boolean isCellEditable(int rowIndex,int columnIndex){
+    
+     return false;
+    }
+
+};
 
 modelo.addColumn ("Nome");
 modelo.addColumn("CPF");
