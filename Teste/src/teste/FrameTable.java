@@ -116,6 +116,17 @@ modelo.addColumn ("Nome");
 modelo.addColumn("CPF");
 modelo.addColumn("Idade");
 
+for (Cliente c : listCliente){
+    
+    modelo.addRow(new Object[]{
+        c.getNome(),
+        c.getCpf(),
+        c.getIdade()
+
+});
+}
+    table.setModel(modelo);
+
 }
 
 }
